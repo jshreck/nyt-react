@@ -7,7 +7,13 @@ export default {
         return axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&begin_date=${startDate}&end_date=${endDate}${APIKEY}`);
     },
     saveArticle: (article) => {
-        console.log(article);
-        // return axios.post("/api/save", article);
+        return axios.post("/api/articles", article);
+    },
+    getSavedArticles: () => {
+        return axios.get("/api/articles/saved");
+    },
+    deleteArticle: (id) => {
+        console.log(id);
+        return axios.delete(`api/articles/delete/${id}`);
     }
 }

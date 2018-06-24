@@ -58,7 +58,10 @@ saveArticle = (event, data) => {
     snippet: article[0].snippet,
     link: article[0].web_url
   }
-  API.saveArticle(toSave);
+  API.saveArticle(toSave)
+  .then((res) => {
+    console.log(res);
+  });
 }
 
   render() {
