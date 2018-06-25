@@ -2,6 +2,7 @@ import React from "react";
 import Articles from "./pages/Articles";
 import Saved from "./pages/Saved";
 import NavBar from "./components/NavBar";
+import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

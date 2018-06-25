@@ -29,11 +29,9 @@ deleteArticle = (event, data) => {
   render() {
     return (
       <div>
-    <h1>Saved Articles</h1>
-
       <ul>
       {this.state.articles.map((article, i) => (
-        <Article 
+       <li> <Article 
         key = {i}
         id = {article._id}
         title = {article.title}
@@ -42,8 +40,8 @@ deleteArticle = (event, data) => {
         snippet = {article.snippet}
         link = {article.link}
         onClick = {this.deleteArticle}
-        btnTxt = "Delete"
-       />
+        btnTxt = "Delete It"
+       /></li>
       ))}
       </ul>
       </div>
